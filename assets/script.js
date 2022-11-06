@@ -1,73 +1,64 @@
-const Questions = [{
-  id: 0,
-  q: "Do sharks have bones?"
-  a: [{text: "True", isCorrect: false},
-      {text: "False", isCorrect: true}
-     ]
-},
-{
-  id: 1
-  q: "What is it called when a shark jumps out of the water?"
-  a: [ {text: "Flying", isCorrect: false},
-        {text: "Leaping", isCorrect: false},
-        {text: "Breach", isCorrect: true},
-        {text: "Scary", isCorrect: false}
-      ]
-},
-{
-  id: 2
-  q: "What is the most dangerous animal in the world?"
-  a: [ {text: "Hippo", isCorrect: false},
-        {text: "Mosquito", isCorrect: true},
-        {text: "Sharks", isCorrect: false},
-        {text: "Dogs", isCorrect: false}
-      ]
-
-  }]
-
-  // Begin
-  var start = true;
-
-  function iterate(id) {
-    var results = document.getElementsByClassName("results");
-    results[0].innerText = ";"
-
-    // Get the question
-    const question = document.getElementById("question");
-
-    question.innerText = Questions[id].q;
-
-    // Get options
-    const first = document.getElementById("first");
-    const second = document.getElementById("second");
-    const third = document.getElementById("third");
-
-    // Get text for options
-    first.innerText = Questions[id].a[0].text;
-    second.innerText = Questions[id].a[1].text;
-    third.innerText = Questions[id].a[2].text;
-
-    var selected = "";
-
-    first.addEventListener("click", () +> )
+const questionArr = [
+  {
+      question: "How can you add a comment in a JavaScript?",
+      options: {
+          a: "A. Just type something", 
+          b: "B. CTL + ?", 
+          c: "C. //", 
+          d: "D. Both B and C are correct",
+      },
+      answer: "d"
+  },
+  {
+      question: "How do you create a function in JavaScript?",
+      options: {
+          a: "A. function = myFunction()", 
+          b: "B. function:myFunction()", 
+          c: "C. function myFunction()", 
+          d: "D. Pray",
+      },
+      answer: "c"
+  },
+  {
+      question: "Where is the correct place to insert a JavaScript?",
+      options: {
+          a: "A. The head", 
+          b: "B. The body", 
+          c: "C. A and B are both correct", 
+          d: "D. None of the above",
+      },
+      answer: "c"
+  },
+  {
+      question: "Inside which HTML element do we put the JavaScript?",
+      options: {
+          a: "A. <script>", 
+          b: "B. <scripting>", 
+          c: "C. <insertJS>", 
+          d: "D. <js>",
+      },
+      answer: "a"
+  },
+  {
+      question: "How do call a function named myFunction?",
+      options: {
+          a: "A. With a phone", 
+          b: "B. call function myFunction()", 
+          c: "C. call myFunction()", 
+          d: "D. myFunction()",            
+      },
+      answer: "d"
   }
+];
 
-  if (start) {
-    iterate("0");
-}
-  
-// Next button and method
-const next = document.getElementsByClassName('next')[0];
-var id = 0;
-  
-next.addEventListener("click", () => {
-    start = false;
-    if (id < 2) {
-        id++;
-        iterate(id);
-        console.log(id);
-    }
-  
-})
+// Global attributes
+var header = document.querySelector(".header");
+var opening = document.querySelector(".opening");
+var container = document.querySelector(".container");
+var divider = document.querySelector(".divider");
+var result = document.querySelector(".result");
+var scores = [];
+var mark = 0;
+var index = 0;
+var record = [];
 
-  
