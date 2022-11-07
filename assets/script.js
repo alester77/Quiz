@@ -188,6 +188,10 @@ function timer() {
       timeEl.textContent = timeStart + "s";
       timeStart--;
 
+      if(result.textContent.match("Oops")) {
+        timeStart -= 10;
+    }
+
       if (timeStart < 0 || scores.length === questionArr.length) {
 
           clearInterval(timeInterval);
