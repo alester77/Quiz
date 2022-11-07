@@ -188,6 +188,8 @@ function timer() {
       timeEl.textContent = timeStart + "s";
       timeStart--;
 
+
+      //this take away time if they get it wrong
       if(result.textContent.match("Oops")) {
         timeStart -= 10;
     }
@@ -276,7 +278,7 @@ function checkResult(event) {
   
     loadData();
   
-    // create two buttons
+    // create the two buttons at the end of the quiz when you're looking at the high scores
     var goBack = document.createElement("button");
     goBack.classList.add("btn", "btn-goBack");
     goBack.textContent = "Go Back";
@@ -289,10 +291,6 @@ function checkResult(event) {
   
     document.querySelector(".btn-goBack").addEventListener("click", begin);
     document.querySelector(".btn-clear").addEventListener("click", clearHistory);
-  }
-  
-  function saveData() {
-    localStorage.setItem("high scores", JSON.stringify(record));
   }
   
   function loadData() {
@@ -313,9 +311,15 @@ function checkResult(event) {
         container.appendChild(highScorestext);
     }
   }
+
+  function saveData() {
+    localStorage.setItem("high scores", JSON.stringify(record));
+  }
+  
+
   
   function clearHistory() {
-    // clear localstorage
+    // clear local storage
     window.localStorage.clear();
     // clear history list under container
     document.querySelectorAll("#quiz-mark").forEach(removeHistory => removeHistory.remove());

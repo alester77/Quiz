@@ -21,6 +21,11 @@ h1 {
   color: blue;
 }
 
+.btn{
+background-color: lightgrey;
+font-size: x-large;
+}
+
 .btn-answer {
   display: flex;
   align-items: center;
@@ -35,4 +40,10 @@ h1 {
 .title {
   font-weight: bold;
   color: blueviolet;
+}
+
+.banner{
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
 }
