@@ -91,7 +91,7 @@ function begin() {
     //create starter paragraph
     var instructions = document.createElement("h2");
     instructions.classList.add("text");
-    instructions.textContent = "Do your best! This quiz is timed and wrong answer will deduct from the time you have.";
+    instructions.textContent = "Do your best! This quiz is timed and wrong answers will deduct from the time you have.";
 
     //create start button
     var startBtn = document.createElement("button");
