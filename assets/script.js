@@ -151,7 +151,7 @@ function makeQuiz() {
         document.textContent = "Good job! Your score is " +mark;
         container.appendChild(finishedScore);
 
-        //need to make where the enter their initials
+        //need to make where they enter their initials
         var enteredInfo = document.createElement("entered");
         enteredInfo.classList.add("entered");
         container.appendChild(enteredInfo);
@@ -304,11 +304,11 @@ function checkResult(event) {
     load = JSON.parse(load);
   
     for (var i = 0; i < load.length; i++) {
-        var highScorestext = document.createElement("li");
-        highScorestext.classList.add("list", "text");
-        highScorestext.setAttribute("id", "quiz-mark");
-        highScorestext.textContent = load[i].name + " : " + load[i].highScore;
-        container.appendChild(highScorestext);
+        var highScoreText = document.createElement("li");
+        highScoreText.classList.add("list", "text");
+        highScoreText.setAttribute("id", "quiz-mark");
+        highScoreText.textContent = load[i].name + " : " + load[i].highScore;
+        container.appendChild(highScoreText);
     }
   }
 
