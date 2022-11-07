@@ -6,7 +6,7 @@
 ### I want to thank my teacher and TA's with helping me learn the concepts through this course. I used a lot of online resources and the students in my class were also super helpful and explained things ina  way that made sense. 
 
 ## Deployed Site
-
+https://alester77.github.io/Quiz/
 
 ## Screenshot of quiz
 <img src="assets/images/screenshot.png">
